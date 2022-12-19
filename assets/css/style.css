@@ -16,6 +16,12 @@ body {
 
 /* utility classes */
 
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
 .btn {
     display: inline-block;
     padding: 0.5em 1.5em;
@@ -39,6 +45,24 @@ body {
 }
 
 /* navigation links */
+
+.navbar {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    height: 50px;
+    z-index: 12;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
 
 .logo {
     order: 1;
@@ -96,3 +120,4 @@ body {
     text-transform: uppercase;
     margin-top: 1.5em;
 }
+

@@ -5,163 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pizza restaurant in Dublin">
-    <meta name="keywords" content="pizza, pizzeria, restaurant, dine, ireland, dublin">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Pizza Restaurant</title>
+    <title>Calculator</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-container container">
-            <h1 class="logo">Hero Pizza</h1>
-            <ul class="menu-items">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#home">About</a></li>
-                <li><a href="#home">Menu</a></li>
-                <li><a href="#home">Bookings</a></li>
-            </ul>
-        </div>
-    </nav>
-    <section class="showcase-area" id="showcase">
-        <div class="showcase-container">
-            <h1 class="main-title" id="home">Say yes to pizza!</h1>
-            <p>Woodfire oven & family owned pizzeria.</p>
-            <a href="#pizza-menu" class="btn btn-primary">Menu</a>
-        </div>
-    </section>
+    <div class="calculator-grid">
 
-    <section id="about">
-        <div class="about-wrapper container">
-            <div class="about-text">
-                <p class="small">About Us</p>
-                <h2>Making neapolitan style pizza for over 20 years</h2>
-                <p>Hero Pizza is a family owned pizzeria crazy about pizza. Our main focus is to offer the best
-                    Neapolitan style pizza in Dublin.
-                    We are the first pizzeria to open in Blanchardstown, our pizzas are freshly made and baked in a
-                    woodfire oven. We have been making the best
-                    pizzas since 1998, always bringing excellent quality, unforgettable flavours and great service.
-                    That's how we conquered our loyal customers
-                    and became one of the top pizzerias in Ireland.
-                </p>
-                <h2>Fresh Ingredients</h2>
-                <p>We use quality ingredients such as organically grown flours, vegetables and herbs.
-                    Taking advantage of the many raw materials that our suppliers offer and constantly continuing in the
-                    search for the best Italian gastronomic excellence.
-                    The integration between the ingredients and their mixing allows us to create new proposals and
-                    continuously update the menu.
-                </p>
-            </div>
-            <div class="about-img">
-                <img src="./assets/images/about-us-pizza.jpg" alt="pizza">
-            </div>
+        <!-- Output section for displaying previous and current operand -->
+        <div class="output">
+            <div class="previous-operand">123</div>
+            <div class="current-operand">456</div>
         </div>
-    </section>
-    <section id="pizza-menu">
-        <h2 class="pizza-menu-heading">Pizza Menu</h2>
-        <div class="pizza-menu-container container">
-            <div class="pizza-menu-item">
-                <div class="pizza-img">
-                    <img src="./assets/images/pizza-margherita.jpg" alt="margherita pizza">
-                </div>
-                <div class="pizza-description">
-                <h2 class="pizza-title">Margherita</h2>
-                    <p>San marzano DOP, fior di latte, parmesan, basil, organic extra virgin olive oil</p>
-                    <p class="pizza-price">Price: &#8364; 14</p>
-                </div>
-            </div>
-            <div class="pizza-menu-item">
-                <div class="pizza-img">
-                    <img src="./assets/images/pizza-bufalina.jpg" alt="bufalina pizza">
-                </div>
-                <div class="pizza-description">
-                <h2 class="pizza-title">Bufalina</h2>
-                    <p>San marzano DOP, fior di latte, buffalo mozzarella, parmesan, organic extra virgin olive oil</p>
-                    <p class="pizza-price">Price: &#8364; 15</p>
-                </div>
-            </div>
-            <div class="pizza-menu-item">
-                <div class="pizza-img">
-                    <img src="./assets/images/pizza-bufalina.jpg" alt="vegan rustica pizza">
-                </div>
-                <div class="pizza-description">
-                <h2 class="pizza-title">Vegan Rustica</h2>
-                    <p>San marzano DOP, vegan mozzarella, aubergines, cherry tomatoes, garlic, toasted pine nuts, rocket, modena
-                        balsamic</p>
-                    <p class="pizza-price">Price: &#8364; 16</p>
-                </div>
-            </div>
-            <div class="pizza-menu-item">
-                <div class="pizza-img">
-                    <img src="./assets/images/pizza-bufalina.jpg" alt="capricciosa pizza">
-                </div>
-                <div class="pizza-description">
-                <h2 class="pizza-title">Capricciosa</h2>
-                    <p>San marzano DOP, fior di latte, parmesan, mushrooms, salami, ham, olives, artichokes, organic extra
-                        virgin olive oil</p>
-                    <p class="pizza-price">Price: &#8364; 17</p>
-                </div>
-            </div>            
-            <div class="pizza-menu-item">
-                <div class="pizza-img">
-                    <img src="./assets/images/pizza-bufalina.jpg" alt="4 formagi pizza">
-                </div>
-                <div class="pizza-description">
-                <h2 class="pizza-title">4 Formagi</h2>
-                    <p>Fior di latte, emmental, auriccio, gorgonzola, parmesan, organic extra virgin olive oil</p>
-                    <p class="pizza-price">Price: &#8364; 18</p>
-                </div>
-            </div>
-            <div class="pizza-menu-item">
-                <div class="pizza-img">
-                    <img src="./assets/images/pizza-bufalina.jpg" alt="prosciutto di parma pizza">
-                </div>
-                <div class="pizza-description">
-                <h2 class="pizza-title">Prosciutto di Parma</h2>
-                    <p>Fior di latte, Parma ham, cherry tomatoes, burrata, pesto, organic extra virgin olive oil</p>
-                    <p class="pizza-price">Price: &#8364; 19</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="contact-container container">
-            <div class="contact-img">
-                <img src="./assets/images/contact-us.jpg" alt="contact us">
-            </div>
-            <div class="form-container">
-                <h2>Contact Us</h2>
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="E-Mail">
-                <textarea cols="30" rows="6" placeholder="Type your message"></textarea>
-                <a href="#" class="btn btn-primary">Submit</a>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <ul class="social-networks">
-            <li>
-                <a href="https://facebook.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-                <a href="https://twitter.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter-square"></i></a>
-            </li>
-            <li>
-                <a href="https://youtube.com" target="_blank" rel="noopener"
-                    aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-youtube-square"></i></a>
-            </li>
-            <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
-            </li>
-        </ul>   
-    </footer>
 
-    <!-- font awesome script -->
-    <script src="https://kit.fontawesome.com/83bea6457b.js" crossorigin="anonymous"></script>
+        <!-- Memory buttons -->
+        <button data-memory-plus>M+</button>
+        <button data-memory-minus>M-</button>
+        <button data-memory-clear>MC</button>
+        <button data-memory-recall>MR</button>
+
+        <!-- AC, delete previous and percentage buttons -->
+        <button data-all-clear class="all-clear">AC</button>
+        <button data-delete>DEL</button>
+        <button data-percentage>%</button>
+
+        <!-- Operators -->
+        <button data-operation>÷</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+
+        <!-- Equals button that spans two columns -->
+        <button data-equals class="span-two">=</button>
+    </div>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

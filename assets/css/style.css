@@ -1,308 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-* {
+/* Set box-sizing and font-family for all elements */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    font-family: Orbitron, sans-serif;
+    font-weight: 500;
 }
 
-.html {
-    font-size: 65%;
-}
-
+/* Set background color and remove margin and padding for body */
 body {
-    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left, #d8f5ff, #fafad2);
 }
 
-/* utility classes */
-
-.container {
-    max-width: 1200px;
-    width: 90%;
-    margin: auto;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.5em 1.5em;
-    text-decoration: none;
-    border-radius: 50px;
-    cursor: pointer;
-    outline: none;
-    margin-top: 1em;
-    text-transform: uppercase;
-    font-weight: normal;
-}
-
-.btn-primary {
-    color: #fff;
-    background: red;
-}
-
-.btn-primary:hover {
-    background: blue;
-    transition: background 0.3s ease-in-out;
-}
-
-/* navigation links */
-
-.navbar {
-    box-shadow: 0px 5px 10px 0px #aaa;
-    position: fixed;
-    width: 100%;
-    background: #fff;
-    color: #000;
-    opacity: 0.85;
-    height: 50px;
-    z-index: 12;
-}
-
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    height: 64px;
-    align-items: center;
-}
-
-.logo {
-    order: 1;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.menu-items {
-    order: 2;
-    display: flex;
-}
-
-.menu-items li {
-    list-style: none;
-    margin-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.menu-items a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-}
-  
-.menu-items a:hover {
-    color: red;
-    transition: color 0.3s ease-in-out;
-}
-
-/* Showcase stlying */
-
-.showcase-area {
-    height: 50vh;
-    background: linear-gradient(
-        rgba(240, 240, 240, 0.1444),
-        rgba(255, 255, 255, 0.336)), 
-        url('../images/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.showcase-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Add calculator grid layout and center its content */
+.calculator-grid {
+    display: grid;
     justify-content: center;
-    height: 100%;
-    font-size: 1.6rem;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 100px);
 }
 
-.main-title {
-    text-transform: uppercase;
-    margin-top: 1.5em;
-}
-
-/* about us */
-
-#about {
-    padding: 50px 0;
-    background: #f5f5f7;
-}
-
-.about-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#about h2 {
-    font-size: 2.3rem;
-}
-
-#about p {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-#about .small {
-    font-size: 1.2rem;
-    color: #666;
-    font-weight: 600;
-}
-
-.about-img {
-    flex: 1 1 400px;
-    padding: 30px;
-}
-
-.about-text {
-    flex: 1 1 400px;
-    padding: 30px;
-    margin: auto;
-}
-
-.about-img img {
-    display: block;
-    height: 400px;
-    max-width: 100%;
-    margin: auto;
-    object-fit: cover;
-    object-position: right;
-}
-
-/* pizza menu */
-
-.pizza-menu-heading {
-    text-align: center;
-    font-size: 3.4rem;
-    font-weight: 400;
-    color: #666;
-}
-
-.pizza-menu-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px 0px 30px 0px;
-}
-
-.pizza-menu-container img {
-    display: block;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.pizza-menu-item {
-    display: flex;
-    flex: 1 1 600px;
-    justify-content: space-evenly;
-    margin-bottom: 3rem;
-}
-
-.pizza-description {
-    margin: auto 1.5rem;
-}
-
-.pizza-title {
+/* Style calculator buttons */
+.calculator-grid>button {
+    cursor: default;
     font-size: 1.8rem;
-    font-weight: 400;
-    color: #444;
+    border: 2px solid black;
+    outline: none;
+    background-color: white;
 }
 
-.pizza-description p {
-    font-size: 1.4rem;
-    color: #555;
-    font-weight: 500;
+/* Style background color of button on hover */
+.calculator-grid>button:hover {
+    background-color: #d8f5ff;
 }
 
-.pizza-description .pizza-price {
-    color: red;
-    font-weight: 700;
+/* Style AC button */
+.all-clear {
+    color: #e81d12;
 }
 
-/* contact us */
-
-#contact {
-    padding: 5rem 0;
-    background: rgb(226, 226, 226);
+/* Style span-two class elements */
+.span-two {
+    grid-column: span 2;
+    color: #e81d12;
 }
 
-.contact-container {
+/* Style output section of calculator */
+.output {
+    grid-column: 1 / -1;
+    background-color: black;
     display: flex;
-    background: #fff;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-.contact-img {
-    width: 50%;
+/* Style previous operand in output section */
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
 }
 
-.contact-img img {
-    display: block;
-    height: 400px;
-    width: 100%;
-    object-position: center;
-    object-fit: cover;
+/* Style current operand in output section */
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
 }
 
-.form-container {
-    padding: 1rem;
-    width: 50%;
-    margin: auto;
-}
+/* Media queries */
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: minmax(100px, auto) repeat(6, 80px);
+    }
 
-.form-container input {
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    padding: 1rem 0;
-    box-shadow: none;
-    outline: none;
-    margin-bottom: 1rem;
-    color: #444;
-    font-weight: 500;
-}
-
-.form-container textarea {
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    color: #444;
-    outline: none;
-    padding: 1rem 0;
-    resize: none;
-}
-
-.form-container h2 {
-    font-size: 2.7rem;
-    font-weight: 500;
-    color: #444;
-    margin-bottom: 1rem;
-    margin-top: -1.2rem;
-}
-
-.form-container a {
-    font-size: 1.3rem;
-}
-
-/* footer */
-
-footer {
-    height: 0;
-}
-
-.social-networks {
-    text-align: center;
-}
-
-.social-networks > li {
-    display: inline;
-}
-
-.social-networks i {
-    font-size: 250%;
-    margin: 1%;
-    padding: 0.5em 1.5em;
-    color: #3a3a3a;
+    .calculator-grid button, .output {
+        font-size: 1.5rem;
+    }
 }
